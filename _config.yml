@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Blog
+title: Ali Adouche
 
 # Your name to show in the footer
 author: Ali Adouche
@@ -24,7 +24,7 @@ navbar-links:
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://adoucheali.com"
+  Author's home: "https://adoucheali.fr"
 
 ################
 # --- Logo --- #
@@ -88,7 +88,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "adoucheali.com"
+url-pretty: "adoucheali.fr"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
