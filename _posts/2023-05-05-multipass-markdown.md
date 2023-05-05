@@ -6,7 +6,7 @@ gh-repo: AdoucheAli/adoucheali.github.io
 gh-badge: [star, fork, follow]
 tags: [VM, linux, ubuntu, devops]
 comments: true
-cover-img: 'https://assets.ubuntu.com/v1/0698ab2d-muiltipass-promo-header.png"'
+cover-img: 'https://assets.ubuntu.com/v1/0698ab2d-muiltipass-promo-header.png'
 last-updated: 2023-05-05
 language: fr
 ---
