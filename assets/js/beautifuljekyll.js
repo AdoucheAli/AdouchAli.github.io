@@ -1,4 +1,6 @@
-// Dean Attali / Beautiful Jekyll 2020
+---
+layout: null
+---
 
 var BeautifulJekyllJS = {
 
@@ -6,6 +8,8 @@ var BeautifulJekyllJS = {
   numImgs : null,
 
   init : function() {
+    checkMode();
+
     setTimeout(BeautifulJekyllJS.initNavbar, 10);
 
     // Shorten the navbar after scrolling a little bit down
@@ -137,6 +141,95 @@ var BeautifulJekyllJS = {
   }
 };
 
-// 2fc73a3a967e97599c9763d05e564189
+
+const toggleBtn = document.getElementById("darkmode");
+let darkMode;
+
+const enableDarkMode = () => {
+  var body = document.body;
+	body.classList.toggle("bg-dark");
+	body.classList.toggle("text-light");
+	body.style.transition = "all 1s";
+
+  changeTextColor("white");
+
+  localStorage.setItem("dark-mode", "enabled");
+};
+
+const disableDarkMode = () => {
+  var body = document.body;
+  body.classList.toggle("bg-dark");
+	body.classList.toggle("text-light");
+  body.style.transition = "all 1s";
+  
+  changeTextColor("black");
+	
+  localStorage.setItem("dark-mode", "disabled");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode(); // set state of darkMode on page load
+}
+
+toggleBtn.addEventListener("click", (e) => {
+  switchMode();
+});
+
+const switchMode = () =>  {
+  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  if (darkMode === "disabled" || darkMode === null) {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+}
+
+const checkMode = () =>  {
+  darkMode = localStorage.getItem("dark-mode"); // update darkMode when clicked
+  if (darkMode === "enabled") {
+    enableDarkMode();
+    toggleBtn.checked = !toggleBtn.checked;
+  }
+}
+
+
+
+function changeTextColor(newColor)
+{
+    var links = document.querySelectorAll(".post-preview a");
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      link.style.color = newColor;  
+
+      link.addEventListener("mouseover", function() {
+        this.style.color = "{{ site.hover-col }}";
+      });
+
+      link.addEventListener("mouseout", function() {
+        this.style.color = newColor;
+      });
+    }
+
+    var tags = document.querySelectorAll(".blog-tags span");
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+      tag.style.color = newColor;  
+    }
+
+    var tags = document.querySelectorAll(".blog-tags a");
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+      tag.style.color = newColor;  
+
+      tag.addEventListener("mouseover", function() {
+        this.style.color = "{{ site.hover-col }}";
+      });
+
+      tag.addEventListener("mouseout", function() {
+        this.style.color = newColor;
+      });
+    }
+    
+}
 
 document.addEventListener('DOMContentLoaded', BeautifulJekyllJS.init);

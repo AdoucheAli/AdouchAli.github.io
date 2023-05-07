@@ -30,6 +30,7 @@
           </li>
         {%- endif -%}
       {%- endfor -%}
+
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
@@ -46,6 +47,9 @@
       {% include {{ file }} %}
     {% endfor %}
   {% endif %}
+
+  <input type="checkbox" class="toggle" id="darkmode">
+
 
   {% if site.avatar and page.show-avatar != false %}
     <div class="avatar-container">
