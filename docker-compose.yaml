@@ -1,12 +1,14 @@
- # docker run --rm --volume="$PWD:/srv/jekyll:Z" -p 4000:4000 jekyll/jekyll jekyll serve
+ # docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll jekyll serve
 
 version: "3"
 services:
   jekyll-serve:
     image: jekyll/jekyll
+    environment:
+      - JEKYLL_ENV=docker #This can be any value except development
     volumes:
       - '.:/srv/jekyll'
     ports:
-      - 4000:4000
-    command: 'jekyll serve'  
+      - "4000:4000"
+    command: 'jekyll serve --config  _config.yml,_config.docker.yml'
     
