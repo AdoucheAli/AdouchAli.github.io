@@ -75,7 +75,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: rss description
 
 ###########################
 # --- General options --- #
@@ -111,7 +111,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+#keywords: "adouche, Ali, développeur, Developer, java, docker, Linux, kubernetes, devops"
 
 ######################################
 # --- Colours / background image --- #
