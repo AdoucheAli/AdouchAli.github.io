@@ -142,7 +142,7 @@ var BeautifulJekyllJS = {
 };
 
 
-const toggleBtn = document.getElementById("darkmode");
+const toggleBtn = document.getElementById("dark-mode");
 let darkMode;
 
 const enableDarkMode = () => {

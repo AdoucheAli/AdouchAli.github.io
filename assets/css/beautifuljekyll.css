@@ -1114,16 +1114,9 @@ pre {
   display: none;
 }
 
-@media (max-width: 1199px) {
-  #nav-search-icon {
-    display: none;
-  }
-  #nav-search-text {
-    display: inline-block;
-  }
+#nav-search-link {
+  margin-right: 30px;
 }
-
-
 
 .toggle {
   -webkit-appearance: none;
@@ -1132,7 +1125,7 @@ pre {
   width: 40px;
   height: 20px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   border-radius: 50px;
   overflow: hidden;
   outline: none;
@@ -1140,12 +1133,10 @@ pre {
   cursor: pointer;
   background-color: white;
   transition: background-color ease 0.3s;
-  margin-right: 10px;
-  margin-left: 10px;
 }
 
 .toggle:before {
-  content: "🌚 🌕";
+  content: "🌙 ☀️";
   display: block;
   position: absolute;
   z-index: 2;
@@ -1159,7 +1150,7 @@ pre {
   text-transform: uppercase;
   font-weight: bold;
   text-indent: -18px;
-  word-spacing: 20px;
+  word-spacing: 25px;
   color: #fff;
   text-shadow: -1px -1px rgba(0,0,0,0.15);
   white-space: nowrap;
@@ -1175,10 +1166,28 @@ pre {
   left: 22px;
 }
 
-.dark-light {
-	background-color :white;
+
+@media (max-width: 1199px) {
+  #nav-search-icon {
+    display: none;
+  }
+  #nav-search-text {
+    display: inline-block;
+  }
 }
 
-bg-dark a { 
-  color: white; 
+@media (min-width: 1200px) {
+  .navbar .navbar-collapse {
+    margin-right: 2.3rem;
+  }
+  #dark-mode {
+    top: auto;
+    right: 1rem;
+  }
+}
+@media (max-width: 1199px) {
+  #dark-mode {
+    top: 0.85rem;
+    right: 5rem;
+  }
 }
