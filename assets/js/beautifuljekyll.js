@@ -232,4 +232,12 @@ function changeTextColor(newColor)
     
 }
 
+//clear search input
+const searchLink = document.getElementById("nav-search-link");
+searchLink.addEventListener("click", function() {
+  const searchInput = document.getElementById("nav-search-input");
+  searchInput.value = "";
+});
+
+
 document.addEventListener('DOMContentLoaded', BeautifulJekyllJS.init);
