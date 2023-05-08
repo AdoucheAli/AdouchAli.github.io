@@ -75,7 +75,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: rss description
+rss-description: Ensemble d'articles sur les outils et technologies que j'utilise en tant que développeur java.
 
 ###########################
 # --- General options --- #
@@ -111,7 +111,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "adouche, Ali, développeur, Developer, java, docker, Linux, kubernetes, devops"
+keywords: "adouche, ali, développeur, developer, java, docker, Linux, kubernetes, devops"
 
 ######################################
 # --- Colours / background image --- #
@@ -247,7 +247,7 @@ timezone: "Europe/Brussels"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-paginate: 1
+paginate: 5
 
 kramdown:
   input: GFM
