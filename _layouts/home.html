@@ -6,6 +6,7 @@ layout: page
 
 {% assign posts = paginator.posts | default: site.posts %}
 
+
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
@@ -100,23 +101,17 @@ layout: page
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<ul class="pagination main-pager">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-dark">Prev</a>
+  <li class="page-item previous">
+    <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">&larr; Newer Posts</a>
+  </li>
   {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="active btn btn-primary">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-light">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"  class="btn btn-light">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-  
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-dark">Next</a>
+  <li class="page-item next">
+    <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">Older Posts &rarr;</a>
+  </li>
   {% endif %}
-</div>
+</ul>
 {% endif %}
