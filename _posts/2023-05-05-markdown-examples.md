@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Multipass
-subtitle: Ubuntu VMs on demand for any workstation
+title: Markdown
+subtitle: Examples
 gh-repo: AdoucheAli/adoucheali.github.io
 gh-badge: [star, fork, follow]
-tags: [VM, linux, ubuntu, devops]
+tags: [markdown]
 comments: true
 cover-img: 'https://assets.ubuntu.com/v1/0698ab2d-muiltipass-promo-header.png'
 last-updated: 2023-05-05
