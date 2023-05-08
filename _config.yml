@@ -15,6 +15,8 @@ title: "Ali Adouche"
 # Your name to show in the footer
 author: "Ali Adouche"
 
+url: "https://blog.adoucheali.fr"
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
@@ -88,7 +90,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "adoucheali.fr"
+url-pretty: "blog.adoucheali.fr"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -247,7 +249,7 @@ timezone: "Europe/Brussels"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-paginate: 5
+paginate: 1
 
 kramdown:
   input: GFM

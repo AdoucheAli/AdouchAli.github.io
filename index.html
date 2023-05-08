@@ -4,3 +4,11 @@ title: Mes notes
 share-title: Hello world!! I'am Ali Adouche
 subtitle: Ensemble d'articles sur les outils et technologies que j'utilise en tant que développeur java. 
 ---
+
+{% assign posts = paginator.posts | default: site.posts %}
+{% assign totalPages = paginator.total_pages | default: 1 %}
+
+<div class="alert alert-primary" role="alert">
+    Nombre d'articles: {{ posts.size }}<br/>
+    Nombre de pages: {{ totalPages }}
+</div>
