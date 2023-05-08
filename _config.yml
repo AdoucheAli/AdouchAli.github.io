@@ -249,7 +249,7 @@ timezone: "Europe/Brussels"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-paginate: 1
+paginate: 5
 
 kramdown:
   input: GFM
